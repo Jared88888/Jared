@@ -125,8 +125,7 @@
 # Full boxes = 4, Leftover = 5.
 items = 34874253285737
 
-print(f"if each box holds 12 items, there will be {items//12} boxes and {items%12} leftover items")
-
+# print(f"if each box holds 12 items, there will be {items//12} boxes and {items%12} leftover items")
 
 
 
