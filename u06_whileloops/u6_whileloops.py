@@ -115,20 +115,26 @@
 # Exercise 7: Multiplication Table with While Loop
 # Write a program to print the multiplication table of 7 up to 10.
 # Example: 7 x 1 = 7, ..., 7 x 10 = 70.
-while True:
-    multiply = 1
-    multiply += 1
+
+
+# i = 1
+# num = int(input("What number do you want to do this for?"))
+# while i <= 12:
+#     print(f"{num} x {i} = {num * i}")
     
-
-
+#     i += 1
 
 #------------------------------------------------------------
 # Exercise 8: Sum of Even Numbers
 # Write a program to calculate the sum of even numbers between 1 
 # and 20 using a while loop. Example: Output = 110.
 
-
-
+# i = 2
+# sum = 0
+# while i < 21:
+#     sum += i
+#     i += 2
+# print(sum) 
 
 
 #------------------------------------------------------------
@@ -136,8 +142,16 @@ while True:
 # Write a program where the user has to guess a random number 
 # between 1 and 10. Keep prompting until they guess correctly.
 
-
-
+import random
+correct = random.randint(1,10)
+print(correct)
+while True:
+    guess = int(input("Enter your guess: "))
+    if guess == correct:
+        print("Correct")
+        break
+    else:
+        print("Wrong")
 
 
 #------------------------------------------------------------
