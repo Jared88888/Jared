@@ -105,25 +105,32 @@ list1 = [2944, 5490, 2357, 2619, 1177, 451, 8299, 2533, 4682, 6040,
 # Exercise 4: Validating List Length
 # Write a program to ensure a list contains at least 5 elements.
 # Prompt the user to add more values until the condition is met.
-list1 = []
-for i in range (5):
-    add = input("Enter in elements ")
-    if add == "":
-        print("Add an element ")
+# list1 = []
+# for i in range (5):
+#     add = input("Enter in elements ")
+#     if add == "":
+#         print("Add an element ")
         
 
-while len(list1) < 5:
-    color = input("Enter a color: ")
-    if color == "":
-        print("YOu must enter a color.")
-    else:
-        list1.append(color)
-print(list1)
+# while len(list1) < 5:
+#     color = input("Enter a color: ")
+#     if color == "":
+#         print("YOu must enter a color.")
+#     else:
+#         list1.append(color)
+# print(list1)
 
 #------------------------------------------------------------
 # Exercise 5: Validating Range of Input
 # Write a program to ensure a user enters a number between 1 and 
 # 100. Repeat until a valid input is given.
+# while True:
+#     num = int(input("Enter a number between 1 and 100: "))
+#     if num < 100 and num > 1:
+#         break
+#     else:
+#         print("It has to be between 1 and 100")
+
 
 
 
@@ -132,14 +139,23 @@ print(list1)
 # Exercise 6: Validating Presence in a List
 # Write a program to ensure a specific value exists in a list.
 # Prompt the user until they enter a value present in the list.
+# animals = ["tiger","lion","elephant","cheetah","giraffe"]
+# print(animals)
 
 
-
+# while True:
+#     enteranimal = input("Enter a value that exists in the list: ")
+#     if enteranimal in animals:
+#         print("Ok it does exist in the list. ")
+#         break
 
 #------------------------------------------------------------
 # Exercise 7: Validating Non-Empty Input
 # Write a program to ensure the user enters a non-empty value.
 # Prompt the user until they enter a valid input.
-
-
-#------------------------------------------------------------
+while True:
+    nonempty = input("Enter a non-empty value.")
+    if nonempty != "":
+        print("ok thanks")
+        break
+    
