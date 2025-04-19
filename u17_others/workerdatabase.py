@@ -107,3 +107,55 @@ while True:
 # If the user searching for a staff name exists in the database, ask user to update or delete the staff record.
 # Update or delete accordingly.
 # Continue to ask the user to search for another staff until the user indicates to stop searching.
+staff = [{'StaffName': 'John', 'Department': 'IT', 'YearsServed': 2}, {'StaffName': 'Mary', 'Department': 'Legal', 'YearsServed': 5}, {'StaffName': 'Kevin', 'Department': 'Finance', 'YearsServed': 6}]
+
+while True:
+    staffname = input("Type a name to search: ")
+    found = False
+
+    # we changed the loop so that we have access to index 
+    for staffnum in range(len(staff)):
+        thisstaff = staff[staffnum] # retrieves the employee dictionary
+
+        # if name matches our database
+        if staffname.lower() == thisstaff["StaffName"].lower():
+            found = True
+            print("Yes our employee.")
+
+            action = input("u=update, d=delete, q=continue. Type command: ")
+            if action.lower() == "u":
+                # updates the dictionary to the new values
+                staff[staffnum]["StaffName"] = input("Enter new staff name: ")
+                staff[staffnum]["Department"] = input("Enter new Department: ")
+                staff[staffnum]["YearsServed"] = int(input("Enter years served: "))
+
+            elif action.lower() == "d":
+                del staff[staffnum] # delete the staff based on index
+
+            elif action.lower() == "q":
+                pass
+                # optional. but feels weird that i must update or delete when i search.
+
+            break
+    
+    if not found:
+        print("Not our employee.")
+
+    searchagain = input("Continue to search? (y/n)? ")
+    if searchagain.lower() == 'n':
+        break
+
+# optional - for clearer output
+print("\nFinal Staff Records:")
+for s in staff:
+    print(s)
+
+
+
+
+
+
+
+
+
+

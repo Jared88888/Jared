@@ -125,3 +125,4 @@ for i in fruits:
     print(i)
     print(x)
     x+=1
+
