@@ -15,29 +15,29 @@
 # Bronze Medalist: 19.7 seconds (Index: 4)
 
 
-race_times = [20.4, 19.9, 21.3, 20.1, 19.7, 22.0, 21.8, 20.8, 
-              19.6, 23.5, 21.2, 22.5, 19.5, 20.6, 21.1]
+# race_times = [20.4, 19.9, 21.3, 20.1, 19.7, 22.0, 21.8, 20.8, 
+#               19.6, 23.5, 21.2, 22.5, 19.5, 20.6, 21.1]
 # Write your code here
-gold = race_times[0]
-silver = race_times[0]
-bronze = race_times[0]
+# gold = race_times[0]
+# silver = race_times[0]
+# bronze = race_times[0]
 
 
-for i in race_times:
+# for i in race_times:
  
-    if gold > i:  
-        bronze = silver  
-        silver = gold  
-        gold = i 
+#     if gold > i:  
+#         bronze = silver  
+#         silver = gold  
+#         gold = i 
 
-    elif silver > i:  
-        bronze = silver  
-        silver = i
+#     elif silver > i:  
+#         bronze = silver  
+#         silver = i
 
-    elif bronze > i:  
-        bronze = i
+#     elif bronze > i:  
+#         bronze = i
 
-        print(f"Gold is {gold}, silver is {silver}, bronze is {bronze}.")
+#         print(f"Gold is {gold}, silver is {silver}, bronze is {bronze}.")
 
 
 #######################################################################
@@ -151,3 +151,74 @@ for i in race_times:
 
 
 ###################################################################
+
+##################################
+# Assignment
+# Scenario: Identifying Star Students for an Award Ceremony
+    
+# Your school is preparing for the end-of-year award ceremony.
+# The principal wants to recognise "Star Students" — those who have shown:
+# - Excellent attendance (at least 90%)
+# - Strong academic performance (score of at least 85)
+
+# You're given two separate dictionaries:
+# - One with student attendance (in %)
+# - One with student scores (out of 100)
+
+# Extract the names of students who meet both criteria.
+# (1) Store them in a list called star_students.
+    
+# (2) Loop through the star_students list and 
+#      print a congratulatory message to each star student like this:
+# "Congratulations Chloe Lim! With an attendance of 95% and a score of 92,
+# you are awarded the Star Student Award!""
+
+# You may assume that the same keys exist in both dictionaries.
+
+attendance = {
+    "Alex Tan": 92, "Benjamin Lee": 88, "Chloe Lim": 95,
+    "Dana Ong": 87, "Ethan Raj": 91, "Farah Bte Ahmad": 94,
+    "Gerald Chan": 78, "Hannah Goh": 85, "Ivan Wong": 96,
+    "Jolene Ng": 93, "Kishore Menon": 70, "Liyana Yusof": 90
+}
+
+scores = {
+    "Alex Tan": 84, "Benjamin Lee": 86, "Chloe Lim": 92,
+    "Dana Ong": 81, "Ethan Raj": 89, "Farah Bte Ahmad": 90,
+    "Gerald Chan": 65, "Hannah Goh": 88, "Ivan Wong": 93,
+    "Jolene Ng": 79, "Kishore Menon": 72, "Liyana Yusof": 85
+}
+
+star_students = []
+for student in attendance:
+    if attendance[student] >= 90 and scores[student] >= 85:
+        star_students.append(student)
+
+for student in star_students:
+    print(f"Congratulations {student}! With an attendance of {attendance[student]}% and a score of {scores[student]}, you are awarded the Star Student Award!")
+###############################################################
+# Scenario: Employee Performance Review
+
+# Finding Maximum, Minimum, and Average Performance Scores 
+# Without Built-in Functions
+# YOU CANNOT USE ANY PYTHON INBUILT FUNCTIONS TO DO THIS.
+
+# A company conducts annual performance reviews for employees. 
+# Each employee is given a performance score out of 100. 
+# The HR department wants to:
+
+# - Identify the top-performing employee (highest score).
+# - Identify the lowest-performing employee (lowest score).
+# - Calculate the average performance score, rounded to 2 decimal places.
+# - Identify underperforming employees (those with scores below 50) 
+#    -> save them into another dictionary called non_performers.
+#   and print a performance warning message to all of these employees.
+
+# performance_scores = {
+#     'Alice': 88, 'Benny': 75, 'Charlie': 92, 'David': 85,
+#     'Emma': 78, 'Farah': 81, 'George': 66, 'Hassan': 94,
+#     'Ivy': 71, 'Jack': 88, 'Liam': 45, 'Jessica': 98,
+#     'Samir': 23, 'Jimmy': 5, 'Bryan': 78, 'Estelle': 9}
+
+# # write your code here
+

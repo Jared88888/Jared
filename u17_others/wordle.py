@@ -1,3 +1,4 @@
+import random
 guess = input("Enter a 5 letter word: ")
 words = ["About", "Alert", "Argue", "Beach", "Above", "Alike", "Arise", "Began", "Abuse", "Alive", "Array", "Begin",
 "Actor", "Allow", "Aside", "Begun", "Acute", "Alone", "Asset", "Being", "Admit", "Along", "Audio", "Below",
@@ -40,9 +41,8 @@ words = ["About", "Alert", "Argue", "Beach", "Above", "Alike", "Arise", "Began",
 "Urban", "Whose", "Watch", "Write", "Usage", "Woman", "Water", "Wrong", "Usual", "Train", "Wheel", "Wrote",
 "Valid", "World", "Where", "Yield", "Value", "Worry", "Which", "Young", "Video", "Worse", "While", "Youth",
 "Virus", "Worst", "White", "Worth", "Visit", "Would", "Vital", "Voice"]
-print(len(words))
-# answer = words[random.randint]
-
+answer = words[random.randint(1, len(words))]
+print(answer)
 
 
 
