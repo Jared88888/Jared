@@ -73,17 +73,17 @@
 # print("".join(listpass))
 
 
-key = 3
-encmsg = ""
-MESSAGE = "THE COLD WATER FROM THE WATER COOLER VERY GOOD"
+# key = 3
+# encmsg = ""
+# MESSAGE = "THE COLD WATER FROM THE WATER COOLER VERY GOOD"
 
-for letter in MESSAGE:
-    num = ord(letter)
-    numplus = num + key
-    newchar = chr(numplus)
-    encmsg = encmsg + newchar
+# for letter in MESSAGE:
+#     num = ord(letter)
+#     numplus = num + key
+#     newchar = chr(numplus)
+#     encmsg = encmsg + newchar
 
-print(encmsg)
+# print(encmsg)
 
 
 
@@ -96,8 +96,12 @@ print(encmsg)
 # first 3 character of last name
 # plus 3 printable characters from ASCII
 # Scenario: Generate a random 9-character username using uppercase letters and digits.
-import random
-firstname = input("Enter your first name: ")
-lastname = input("Enter your last name: ")
-print(f"{firstname[:3]}{lastname[-3:]}{chr(random.randint(32, 126))}{chr(random.randint(32, 126))}{chr(random.randint(32, 126))}")
+# import random
+# firstname = input("Enter your first name: ")
+# lastname = input("Enter your last name: ")
+# print(f"{firstname[:3]}{lastname[-3:]}{chr(random.randint(32, 126))}{chr(random.randint(32, 126))}{chr(random.randint(32, 126))}")
 
+
+letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+letter = "J"
+index = letters.find
