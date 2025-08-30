@@ -222,3 +222,23 @@ for student in star_students:
 
 # # write your code here
 
+#########################----------
+overweight = 0
+underweight = 0
+upper_bound = 5.1
+lower_bound = 4.9
+while True:
+    bag_weight = float(input("Enter the weight of the bag of rice ('stop' to stop): "))
+    if bag_weight == "stop":
+        break
+    if bag_weight > upper_bound:
+        print("The bag of rice is overweight")
+        overweight += 1
+    elif bag_weight < lower_bound:
+        print("The bag of rice is underweight")
+        underweight += 1
+    else:
+        print("The bag of rice is the correct weight. ")
+
+print(f"The number of overweight bags are {overweight}")
+print(f"The number of underweight bags are {underweight}")
