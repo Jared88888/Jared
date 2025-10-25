@@ -81,31 +81,31 @@
 # # In-Class Exercise 1: Student Grades Analysis
 # # Scenario: A teacher needs to analyze student performance.
 # # Create a dictionary with student names as keys and grades as values.
-# # students = {
-# #     'Ali': 88, 'Benny': 75, 'Chloe': 92, 'Diana': 85,
-# #     'Ethan': 78, 'Farid': 81, 'Grace': 66, 'Haziq': 94,
-# #     'Ivy': 71, 'Jun': 88, 'Ullas':45, 'Josephine':98,
-# #     'Sor Lang': 23, 'Jimmy': 5, 'Borui': 78, 'Esther': 9}
+# students = {
+#     'Ali': 88, 'Benny': 75, 'Chloe': 92, 'Diana': 85,
+#     'Ethan': 78, 'Farid': 81, 'Grace': 66, 'Haziq': 94,
+#     'Ivy': 71, 'Jun': 88, 'Ullas':45, 'Josephine':98,
+#     'Sor Lang': 23, 'Jimmy': 5, 'Borui': 78, 'Esther': 9}
 
-# # # Task 1: Identify and print the name of the highest scoring student.
-# # highest = 0
-# # for i in students:
-# #     if students[i] > highest:
-# #         highest = students[i]
-# # print(highest)
-# # #------------------------------------------------------------
-# # # Task 2: Calculate and display the number of students scoring above 80.
-# # counter = 0
-# # for j in students:
-# #     if students[j] > 80:
-# #         counter += 1
-# # print(counter)
-# # #------------------------------------------------------------
-# # # Task 3: Update all grades by adding 5 points as a bonus.
+# # # # Task 1: Identify and print the name of the highest scoring student.
+# highest = 0
+# for i in students:
+#     if students[i] > highest:
+#         highest = students[i]
+# print(highest)
+# # # #------------------------------------------------------------
+# # # # Task 2: Calculate and display the number of students scoring above 80.
+# counter = 0
+# for j in students:
+#     if students[j] > 80:
+#         counter += 1
+# print(counter)
+# # # #------------------------------------------------------------
+# # # # Task 3: Update all grades by adding 5 points as a bonus.
 
-# # for x in students:
-# #     students[x] = students[x] + 5
-# # print(students)
+# for x in students:
+#     students[x] = students[x] + 5
+# print(students)
 
 # #------------------------------------------------------------
 # # In-Class Exercise 2: Inventory Stock Management

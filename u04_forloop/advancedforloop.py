@@ -204,10 +204,10 @@
 # names = ["Alice", "Ben", "Carmen", "Dylan"]
 # marks = [85, 73, 91, 66]
 
-# names = ["Alice", "Ben", "Carmen", "Dylan"]
-# marks = [85, 73, 91, 66]
-# for i in range(len(names)):
-#     print(f"{names[i]} : {marks[i]}")
+names = ["Alice", "Ben", "Carmen", "Dylan"]
+marks = [85, 73, 91, 66]
+for i in range(len(names)):
+    print(f"{names[i]} : {marks[i]}")
 
 
 
@@ -221,9 +221,9 @@
 
 
 
-# for i in range(1, 5):
-#     for j in range(1, 5):
-#         print(i*j)
+for i in range(1, 5):
+    for j in range(1, 5):
+        print(i*j)
 
 #------------------------------------------------------------
 # Exercise 16: Pattern Printing (Right Triangle)

@@ -57,22 +57,72 @@
 #             item_number = items
 
 
-colour_list = ['red','green', 'blue','orange', 'purple','yellow']
-colour_to_find = input("Which colour would you like to search for? ")
-items = len(colour_list) #change to find length of list
-item_number = 0
-colour_found = False
-while colour_found == False: #set to false to start while loop
-    while item_number < items: #change to less than
-        if colour_list[item_number] == colour_to_find: #add == and :
-            print("There are " + str(items) + " colours in the list, " + colour_to_find + " is item " + str(item_number + 1) + " in the list.") #change to items and item number #make it add 1 not minus 1
-            colour_found = True
-            item_number = items #make it to items #this breaks the loop
+# colour_list = ['red','green', 'blue','orange', 'purple','yellow']
+# colour_to_find = input("Which colour would you like to search for? ")
+# items = len(colour_list) #change to find length of list
+# item_number = 0
+# colour_found = False
+# while colour_found == False: #set to false to start while loop
+#     while item_number < items: #change to less than
+#         if colour_list[item_number] == colour_to_find: #add == and :
+#             print("There are " + str(items) + " colours in the list, " + colour_to_find + " is item " + str(item_number + 1) + " in the list.") #change to items and item number #make it add 1 not minus 1
+#             colour_found = True
+#             item_number = items #make it to items #this breaks the loop
             
-        elif item_number == items - 1: 
-            print("The colour is not in the list. ")
-            colour_found = True #change to true
-            item_number = items
+#         elif item_number == items - 1: 
+#             print("The colour is not in the list. ")
+#             colour_found = True #change to true
+#             item_number = items
             
-        else:
-            item_number += 1 #make it increase by 1
+#         else:
+#             item_number += 1 #make it increase by 1
+
+#original buggy code
+# group_1 = []
+# group_2 = []
+# group_3 = []
+# flag = True
+# while flag:
+#     first_name = input("Please enter the child's name: ").upper()
+#     first_name = first_name[1]
+#     age = input("Please enter the child's age: ")
+#     if first_letter >= "A" and first_letter <= "M" and age > 10:
+#         group_1 = group_1 + [first_name]
+#     elif first_letter >= "M" or age > 10:
+#         group_2 = group_2 + [first_name]
+#     elif age < 10:
+#         group_3 = group_3 + [first_name]
+#         count += 1
+#     more = input("Do you have another child to enter, Y or N?: ")
+#     if more == "Y":
+#         flag = False
+
+# print("You have entered the names of", flag, "children")
+# print("The members of group 1 are", group_1)
+# print("The members of group 2 are", group_2)
+# print("The members of group 3 are", group_3)
+
+group_1 = []
+group_2 = []
+group_3 = []
+flag = True
+count = 0 #create a starting count
+while flag:
+    first_name = input("Please enter the child's name: ").upper()
+    first_letter = first_name[0] #change name to first_letter #0 since first letter
+    age = int(input("Please enter the child's age: ")) #integer
+    if first_letter <= "A" and first_letter >= "M" and age > 10: #change comparison signs (2)
+        group_1 = group_1 + [first_name]
+    elif first_letter <= "N" and age > 10: #change comparison sign #change M to N #change to and
+        group_2 = group_2 + [first_name]
+    elif age <= 10: #<= since 10 included
+        group_3 = group_3 + [first_name]
+    count += 1 #remove indent
+    more = input("Do you have another child to enter, Y or N?: ")
+    if more == "N": #change to N
+        flag = False
+
+print("You have entered the names of", count, "children") #change to count
+print("The members of group 1 are", group_1)
+print("The members of group 2 are", group_2)
+print("The members of group 3 are", group_3)

@@ -1,5 +1,6 @@
+import getpass
 while True:
-    word = input("Player 1, enter a word: ").lower() #for player 1 to enter a code
+    word = getpass.getpass("Player 1, enter a word: ").lower() 
     if len(word) > 10:
         print("cannot be more than 10")
     else:
@@ -20,6 +21,6 @@ for i in range(10):
 print("You have entered 10 letters. ")
 guess = input("Enter player 1's word. ").lower()
 if guess == word:
-    print("That is the correct word. You win!")
+    print("That is the correct word. Player 2 win!")
 else:
     print("That is not the correct word. PLayer 1 wins!")
