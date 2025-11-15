@@ -21,14 +21,25 @@ def voucher(discounted_cost, first_name):
         voucher_code = first_name[:3] + "05PERCENT"
     elif discounted_cost > 50:
         voucher_code = first_name[:3] + "10PERCENT"
+    else:
+        voucher_code = None
     return voucher_code
 
 fname = input("Enter your first name: ")
 cost1 = int(input("Enter cost: "))
 print(f"""
 Receipt
-Total cost: {total_cost(cost1)}   
+      
+Total cost: {total_cost(cost1)}  
+
 Discounted cost: {discount(cost1)} 
+
 Reward points: {reward_points(discount(cost1))}
 """)
-
+if voucher(discount(cost1), fname) == None:
+    print("You need to spend over $25 for a voucher code. ")
+else:
+    print(f"Voucher code: {voucher(discount(cost1), fname)}")
+    file = open("vouchercode.txt", "w")  # Open in write mode
+    file.write(voucher(discount(cost1), fname))    # Write text to the file
+    file.close()  
