@@ -92,13 +92,16 @@ listofwords = contents.split(",")
 #choose random word
 import random
 
-#correctword = listofwords[random.randint(0, 5757)].upper()
-correctword = "CARRY"
-
+correctword1 = listofwords[random.randint(0, 5757)].upper()
 count = 0
-while count < 6:
+successful = False
+while count < 7:
     guess = input("Guess a 5-letter word: ").upper()
-
+    while len(guess) != 5 and guess.isalpha == False:
+        guess = input("Guess a 5-letter word: ").upper()
+    
+    correctword = list(correctword1)
+    guess = list(guess)
     count += 1
     
     print("""
@@ -106,13 +109,33 @@ while count < 6:
     🟨 = letter is in word, but wrong position
     🟩 = letter is in word and correct position    """)
 
-    feedback = ""
-
-    for i in guess:
-        if correctword.find(i) == -1:
-            feedback += "⬛"
-        elif correctword.find(i) != guess.find(i):
-            feedback += "🟨"
-        elif correctword.find(i) == guess.find(i):
-            feedback += "🟩"
+    feedback = ["⬛", "⬛", "⬛", "⬛", "⬛"]
+    print(guess)
+    
+    for i in range(5):
+        if guess[i] == correctword[i]:
+            feedback[i] = "🟩"
+            correctword[i] = "Guessed"
+            guess[i] = "Guesssed"
+            
+    for i in range(5): #yellow is not working
+        if guess[i] in correctword:
+            feedback[i] = "🟨"
+            index = correctword.index(guess[i])
+            correctword[index] = "Guessed"
+            guess[i] = "Guesssed"
+            
     print(feedback)
+
+    counter = 0
+    for i in feedback:
+        if i == "🟩":
+            counter += 1
+
+    if counter == 5:
+        successful = True
+        print("You have guessed the word successfully")
+        break
+
+if successful == False:
+    print(f"The correct word is {correctword1}. ")
