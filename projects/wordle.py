@@ -90,6 +90,7 @@ listofwords = contents.split(",")
 
 
 #choose random word
+############### GAME STARTS HERE
 import random
 
 correctword1 = listofwords[random.randint(0, 5757)].upper()
