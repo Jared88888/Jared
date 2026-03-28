@@ -112,7 +112,7 @@ while count < 7:
     🟩 = letter is in word and correct position    """)
 
     feedback = ["⬛", "⬛", "⬛", "⬛", "⬛"]
-    print(guess)
+    print(" " + " ".join(guess))
     
     for i in range(5):
         if guess[i] == correctword[i]:
@@ -127,7 +127,7 @@ while count < 7:
             correctword[index] = "Guessed"
             guess[i] = "Guesssed"
             
-    print(feedback)
+    print("".join(feedback))
 
     counter = 0
     for i in feedback:
