@@ -27,3 +27,4 @@ if guess == word:
     print("That is the correct word. Player 2 win!")
 else:
     print("That is not the correct word. PLayer 1 wins!")
+    print(f"The correct word is {word}")
