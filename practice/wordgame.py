@@ -20,6 +20,7 @@ for i in range(10):
             print(f"{letter} is letter number {positions[i]} in the word. ")
     else:
         print("This letter is not in the word")
+        
 print("You have entered 10 letters. ")
 guess = input("Enter player 1's word. ").lower()
 if guess == word:
