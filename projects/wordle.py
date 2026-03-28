@@ -1,4 +1,5 @@
 with open("FiveLetterWords.txt", "r") as fobj:
+
     contents = fobj.read()
     # print(contents)
 
