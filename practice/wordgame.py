@@ -8,14 +8,16 @@ while True:
 
 print(f"Player 1's word contains {len(word)} letters")
 for i in range(10):
-    letter = input("Player 2, guess a letter. ").lower()
+    letter = input("Player 2, guess a letter: ").lower()
     if letter in word:
-        counter = 1
-        for i in word:
-            if letter != i:
-                counter += 1
-            else:
-                print(f"{letter} is letter number {counter} in the word")
+        appearances = word.count(letter)
+        positions = []
+        for i in range(len(word)):
+            if word[i] == letter:
+                positions.append(i+1)
+        
+        for i in range(len(positions)):
+            print(f"{letter} is letter number {positions[i]} in the word. ")
     else:
         print("This letter is not in the word")
 print("You have entered 10 letters. ")
