@@ -97,10 +97,10 @@ correctword1 = listofwords[random.randint(0, 5757)].upper()
 count = 0
 successful = False
 while count < 7:
-    guess = input("Guess a 5-letter word: ").upper()
-    while len(guess) != 5 and guess.isalpha == False:
+    while True:
         guess = input("Guess a 5-letter word: ").upper()
-    
+        if len(guess) == 5 and guess.isalpha():
+            break
     correctword = list(correctword1)
     guess = list(guess)
     count += 1
