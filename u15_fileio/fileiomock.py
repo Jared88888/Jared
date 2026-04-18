@@ -31,25 +31,21 @@
 # Write program code for the function read_values(). 
 #########################################
 # Write code for Task A here
+data_store = {}
 
-data_stored = {}
-
-def read_values():
-    with open("shapes.txt", "r") as shapefile:
-        shapestring = shapefile.read()
-
+with open("shapes.txt", "r") as shapefile:
+    shapecontent = shapefile.read()
+    shapelist = shapecontent.split(",")
     with open("colours.txt", "r") as colourfile:
-        colourstring = colourfile.read()
+        colourcontent = colourfile.read()
+        colourlist = colourcontent.split(",")
+        
+print(shapelist)
+print(colourlist)
 
-    shapelist = shapestring.split(",")
-    colourlist = colourstring.split(",")
-
-    for i in range (len(shapelist)):
-        data_stored[shapelist[i]] = colourlist[i]
-
-    print(data_stored)
-
-read_values()
+for i in range(len(shapelist)):
+    data_store[shapelist[i]] = colourlist[i]
+print(data_store)
 
 #########################################
 # Task B -  4 marks
@@ -60,14 +56,9 @@ read_values()
 # Write program code for the function output_result(). 
 #########################################
 # Write code for Task B here
-
 def output_result():
     while True:
-        shapetofind = input("Enter the shape you want to find: ").lower()
-        if shapetofind in data_stored:
-            print(data_stored(shapetofind))
+        find = input("Enter the shape that must be found. ")
+        if find in data_store:
             break
-        else:
-            print("Not in dictionary. ")
-            
-output_result()
+

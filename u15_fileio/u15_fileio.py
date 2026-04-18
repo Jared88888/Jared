@@ -121,7 +121,7 @@
 # # Exercise 5: Write Multiple Lines
 # # Write a list of strings to "output.txt" using 'with'.
 # lines = ["Line 1\n", "Line 2\n", "Line 3\n"]
-# with open("output.txt", "w") as file:
+# with open ("output.txt", "w") as file:
 #     file.writelines(lines)
 
 
