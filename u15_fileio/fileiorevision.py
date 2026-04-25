@@ -278,15 +278,15 @@
 #
 # Write your code below.
 # ---------------------------------------------------------
-with open("q7_temperatures.txt", "r") as file:
-    numlist = file.readlines()
-greater_than_30 = []
-for i in numlist:
-    if int(i) > 30:
-        greater_than_30.append(i)
+# with open("q7_temperatures.txt", "r") as file:
+#     numlist = file.readlines()
+# greater_than_30 = []
+# for i in numlist:
+#     if int(i) > 30:
+#         greater_than_30.append(i)
 
-with open("hot_days.txt", "a") as file:
-    file.writelines(greater_than_30)
+# with open("hot_days.txt", "a") as file:
+#     file.writelines(greater_than_30)
 
 
 
