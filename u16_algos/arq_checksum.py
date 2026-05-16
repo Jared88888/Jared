@@ -99,7 +99,7 @@ def extract_messages(packet_list):
     message_checksum = {}
     for i in packet_list:
         checksum = i[((int(i[:3]) + 3)):]
-        message_checksum[i] = checksum
+        message_checksum[i[:((int(i[:3]) + 3))]] = checksum
     return message_checksum
 
 print(extract_messages(read_file("input.txt")))
