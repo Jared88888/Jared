@@ -1,0 +1,94 @@
+# The task is to edit program code that allows a player 
+# to guess a 3-digit secret number.
+
+# Each digit in the secret number is randomly 
+# chosen from the digits 1, 2, 3, 4, and 5.
+# The player has 5 tries to guess the correct number. 
+# If the player guesses all 3 digits correctly and 
+# in the correct order within 5 tries, they win. Otherwise, they lose.
+
+# Task 2.1
+# The following program generates a 3-digit secret number with digits only from 1 to 5. 
+#  Each digit is added one at a time using a loop.
+
+import random
+secret_code = ""
+for i in range(3):
+    digit = str(random.randint(1, 5))
+    secret_code = secret_code + digit
+
+print("Guess the 3-digit number. Each digit is from 1 to 5: ")
+print("You have 5 tries. Enter your guess (e.g. 123). ")
+
+# Edit the program so that it:
+# (a)  Compares the user's guess with the secret code.[1] 
+# (b)  Prints out the number of correct digit(s) that are in the correct position, 
+#      after each guess is entered                     [3]
+# (c)  Stop the game if the plater guesses correctly or after 5 attempts. 
+#      Show an appropriate win or lose message.          [3]
+# (d)  Print the correct secret number if the player loses.[1]
+# Task 2.1
+###################################################
+# attempts = 0
+# win = False
+# for i in range(5):
+#     if attempts == 5:
+#         break
+#     guess = input("Enter your guess: ")
+#     corrects = 0
+#     attempts += 1
+#     for i in range(3):
+#         if secret_code[i] == guess[i]:
+#             corrects += 1
+#         if corrects == 3:
+#             win = True
+#             print("Correct! ")
+#             break
+#     print(f"You have {corrects} digits in the correct position. ")
+# if win == False:
+#     print(secret_code)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Task 2.2
+# Copy and paste your program from sub-task 2.1
+# Extend the program so that it validates that the input 
+# has exactly the 3 digits using a loop. Ask again if not valid.[2]
+########################################################################
+
+# Save your program.
+attempts = 0
+win = False
+for i in range(5):
+    if attempts == 5:
+        break
+    guess = input("Enter your guess: ")
+    if not guess.isdigit() or len(guess) != 3:
+        while True:
+            guess = input("Enter your guess, it has to be 3 digits: ")
+            if guess.isdigit() and len(guess) == 3:
+                break
+    corrects = 0
+    attempts += 1
+    for i in range(3):
+        if secret_code[i] == guess[i]:
+            corrects += 1
+        if corrects == 3:
+            win = True
+            print("Correct! ")
+            break
+    print(f"You have {corrects} digits in the correct position. ")
+if win == False:
+    print(f"You lost! The answer is {secret_code}. ")
