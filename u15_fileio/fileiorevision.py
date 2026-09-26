@@ -1,38 +1,40 @@
 
-# # file_creation.py
-# # Creates the text files needed for the File IO practice questions
+# file_creation.py
+# Creates the text files needed for the File IO practice questions
 
-# files_data = {
-#     "q1_greeting.txt": "Hello and welcome to Python File IO.",
+files_data = {
+    "q1_greeting.txt": "Hello and welcome to Python File IO.",
     
-#     "q3_diary.txt": "I went to school today.",
+    "q3_diary.txt": "I went to school today.",
     
-#     "q4_fruits.txt": "apple\nbanana\norange\nmango",
+    "q4_fruits.txt": "apple\nbanana\norange\nmango",
     
-#     "q5_marks.txt": "75\n62\n88\n49\n91\n56",
+    "q5_marks.txt": "75\n62\n88\n49\n91\n56",
     
-#     "q6_names.txt": "amir\nbeth\nchen\ndivya",
+    "q6_names.txt": "amir\nbeth\nchen\ndivya",
     
-#     "q7_temperatures.txt": "29\n31\n33\n28\n35\n30\n36",
+    "q7_temperatures.txt": "29\n31\n33\n28\n35\n30\n36",
     
-#     "q8_animal_names.txt": "cat,dog,rabbit,hamster",
+    "q8_animal_names.txt": "cat,dog,rabbit,hamster",
     
-#     "q8_animal_sounds.txt": "meow,bark,squeak,peep",
+    "q8_animal_sounds.txt": "meow,bark,squeak,peep",
     
-#     "q9_scores.txt": "56\n72\nabc\n91\n-4\n105\n68",
+    "q9_scores.txt": "56\n72\nabc\n91\n-4\n105\n68",
     
-#     "q10_expenses.txt": "Transport,12\nFood,8\nBooks,15\nTransport,10\nFood,6\nFood,9",
+    "q10_expenses.txt": "Transport,12\nFood,8\nBooks,15\nTransport,10\nFood,6\nFood,9",
     
-#     "q11_sales.txt": "Transport,12\nFood,8\nBooks,15\nTransport,10\nFood,6\nFood,9"
-# }
+    "q11_sales.txt": "Pen,12,1.5\nBook,5,4.8\nEraser,20,0.6\nPencil,10,1.2\nRuler,3,2.5"
+}
 
-# for file_name, file_content in files_data.items():
-#     file = open(file_name, "w")
-#     file.write(file_content)
-#     file.close()
-#     print(file_name + " created successfully")
 
-# print("All files have been created.")
+
+for file_name, file_content in files_data.items():
+    file = open(file_name, "w")
+    file.write(file_content)
+    file.close()
+    print(file_name + " created successfully")
+
+print("All files have been created.")
 # =========================================================
 # FILE IO PRACTICE QUESTIONS
 # Focus: open(), .read(), .readlines(), .write(), .writelines()
@@ -324,12 +326,19 @@
 # Write your code below.
 # ---------------------------------------------------------
 
+# animals_dict = {}
+# with open("q8_animal_names.txt", "r") as file:
+#     names = file.read() # string 
+#     animal_names = names.split(",")
 
+# with open("q8_animal_sounds.txt", "r") as file:
+#     sounds = file.read()
+#     animal_sounds = sounds.split(",")
 
+# for i in range(len(animal_names)):
+#     animals_dict[animal_names[i]] = animal_sounds[i]
 
-
-
-
+# print(animals_dict)
 
 
 
@@ -367,8 +376,21 @@
 
 # Write your code below.
 # ---------------------------------------------------------
+# with open("q9_scores.txt", "r") as file:
+#     scores = file.readlines()
 
+# valids = []
+# invalids = []
 
+# for score in scores:
+#     score = score[:-1] #score = score.strip() #\n is considered one
+#     if score.isdigit() and int(score) <= 100 and int(score) >= 0:
+#         valids.append(score)
+#     else:
+#         invalids.append(score)
+
+# print(valids)
+# print(invalids)
 
 
 
@@ -414,12 +436,23 @@
 # Books: 15
 # Write your code below.
 # ---------------------------------------------------------
+# expenses_dict = {}
+# with open("q10_expenses.txt", "r") as file:
+#     contents = file.readlines()
+# for content in contents:
+#     new = content.split(",")
+#     if new[0] not in expenses_dict:
+#         expenses_dict[new[0]] = int((new[1]).strip())
+#     else:
+#         expenses_dict[new[0]] += int((new[1]).strip())
 
-
-
-
-
-
+# total = 0
+# for i in expenses_dict:
+#     total += expenses_dict[i] 
+# print(f"Total spending: {total}. ")
+# print(f"Transport: {expenses_dict["Transport"]}")
+# print(f"Food: {expenses_dict["Food"]}")
+# print(f"Books: {expenses_dict["Books"]}")
 
 
 # ---------------------------------------------------------
@@ -456,12 +489,14 @@
 #     - unit price as a float
 # Write your code below.
 # ---------------------------------------------------------
+def read_sales():
+    with open("q11_sales.txt", "r") as file:
+        contents = file.readlines()
+    for content in contents:
+        new = content.split(",")
+        print(new)
 
-
-
-
-
-
+read_sales()
 
 
 
