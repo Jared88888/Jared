@@ -1,0 +1,8 @@
+English: 71(A2) 
+Higher Chinese: 80(A1) 
+Chemistry: 73(A2) 
+Geography: 72(A2) 
+Mathematics: 76(A1) 
+66: 66(B3) 
+Computing: 70(A2) 
+Computed L1R5: 11
